@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+    
+</head>
+<body>
+    <div class="head">
+        <h1 class="title">JS Questions Quiz </h1>
+        <span class="qselect">number Of Qustions :
+        <select name="Questions" id="numberOfQustions">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="74">75</option>
+        </select></span>
+    
+    </div>
+    
+    <h2 class="score">score:</h2>
+    <div class="container">
+        <div class="question">
+            <div class="txt">question</div>
+            <pre class="code"></pre>
+
+          <!--  <button class="explain">Show Me</button>-->
+        </div>
+        <div class="answers">
+           <button class="answer a1" data-clicked="false">A</button>
+            <button class="answer a2" data-clicked="false">B</button>
+            <button class="answer a3" data-clicked="false">C</button>
+            <button class="answer a4" data-clicked="false">D</button>
+        </div>
+        <div class="bottom-btn">
+            <button class="back b-btn">Back</button>
+            <button class="grade b-btn">Grade</button>
+            <button class="next b-btn">Next</button>
+        </div>
+    </div>
+   
+   <!--
+    <div class="console" style="display:none;">
+        <textarea class="codeInput"  placeholder="working on it ... 
+with this you will be able to run the code front of your eyes
+        "></textarea>
+        <div class="output"></div>
+    </div>
+   --> 
+      
+    <script type="module" src="script.js"></script>
+</body>
+</html>
