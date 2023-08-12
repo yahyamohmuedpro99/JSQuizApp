@@ -196,6 +196,10 @@ next.addEventListener('click', function() {
 
     qtxt.textContent = `${qcount + 1}: ` + jsQuestions[qcount].question;
     code.textContent = jsQuestions[qcount].code;
+      answerButtons.forEach((button, index) => {
+        button.textContent = jsQuestions[qcount].options[index];
+        button.style.backgroundColor= defaultColor
+    }); 
 
     updateAnswerButtonsContent();
 })
