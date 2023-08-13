@@ -16,7 +16,7 @@ Welcome to the JavaScript Questions Quiz! This interactive quiz tests your JavaS
 
 ## Demo
 
-Check out the live demo of the quiz: [Live Demo]([https://yahyamohmuedpro99.github.io/JSQuizApp/])
+Check out the live demo of the quiz: [Live Demo]([[https://yahyamohmuedpro99.github.io/JSQuizApp/]](https://yahyamohmuedpro99.github.io/JSQuizApp/))
 
 ## How to Use
 
