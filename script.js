@@ -201,7 +201,6 @@ next.addEventListener('click', function() {
         button.style.backgroundColor= defaultColor
     }); 
 
-    updateAnswerButtonsContent();
 })
 
 
