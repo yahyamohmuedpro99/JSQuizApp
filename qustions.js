@@ -31,23 +31,7 @@ const jsQuestions = [
     ],
     correctAnswer: 0
   },
-  {
-    question: "What will be displayed in the console?",
-    code: `
-      var person = {
-        name: "John",
-        age: 30
-      };
-      console.log(person.name);
-    `,
-    options: [
-      "John",
-      "name",
-      "30",
-      "undefined"
-    ],
-    correctAnswer: 0
-  },
+  
   {
     question: "What is the output of this expression?",
     code: `
@@ -56,13 +40,13 @@ const jsQuestions = [
       console.log(a + b);
     `,
     options: [
-      "510",
+      
       "15",
       "Error",
-      
-      "undefined"
+      "undefined",
+      "510"
     ],
-    correctAnswer: 0
+    correctAnswer: 3
   },
   {
     question: "What is the value of the variable?",
@@ -72,12 +56,12 @@ const jsQuestions = [
       console.log(x % y);
     `,
     options: [
-      "1",
       "2",
-      "0.42857142857142855",
+      "1",
+      "0.42",
       "8"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
     // ... continue with the remaining questions ...
       {
@@ -101,23 +85,10 @@ const jsQuestions = [
             i++;
           }
         `,
-        options: ["0 1 2 3 4", "5", "1 2 3 4 5", "0 1 2 3"],
-        correctAnswer: 0
+        options: ["5", "1 2 3 4 5","0 1 2 3 4 4",  "0 1 2 3"],
+        correctAnswer: 2
       },
-      {
-        question: "What will be logged to the console?",
-        code: `
-          var fruits = ["apple", "banana", "orange"];
-          for (var fruit of fruits) {
-            if (fruit === "banana") {
-              continue;
-            }
-            console.log(fruit);
-          }
-        `,
-        options: ["apple orange", "apple", "banana orange", "Error"],
-        correctAnswer: 0
-      },
+      
       {
         question: "What is the output?",
         code: `
@@ -154,8 +125,8 @@ const jsQuestions = [
               console.log(key + ": " + person[key]);
             }
           `,
-          options: ["name: Alice age: 25", "name\nAlice age\n25", "Alice\n25", "person[name]\nperson[age]"],
-          correctAnswer: 0
+          options: ["Alice\n25","name: Alice age: 25","name: Alice ",  "person[name]\nperson[age]"],
+          correctAnswer: 1
         },
         {
           question: "What will be the output of this code?",
@@ -166,8 +137,8 @@ const jsQuestions = [
               x += 2;
             }
           `,
-          options: ["1 3 5 7 9", "2 4 6 8 10", "1 2 3 4 5", "10 9 8 7 6"],
-          correctAnswer: 0
+          options: ["2 4 6 8 10","1 3 5 7 9 11",  "1 2 3 4 5", "10 9 8 7 6"],
+          correctAnswer: 1
         },
         {
           question: "What is the value of z after this loop?",
@@ -245,8 +216,8 @@ const jsQuestions = [
           n--;
         } while (n > 0);
       `,
-      options: ["5 4 3 2 1", "0", "1 2 3 4 5", "5"],
-      correctAnswer: 0,
+      options: [ "0","5 4 3 2 1 1", "1 2 3 4 5", "5"],
+      correctAnswer: 1,
     },
     // Question 30
     {
@@ -275,8 +246,8 @@ const jsQuestions = [
           x += 2;
         }
       `,
-      options: ["1 3 5", "2 4 6", "1 2 3 4 5", "5"],
-      correctAnswer: 0
+      options: [ "2 4 6", "1 2 3 4 5","1 3 5 7", "5"],
+      correctAnswer: 2
     },
     {
       question: "What will be the result of the expression?",
@@ -341,8 +312,8 @@ const jsQuestions = [
             i += 3;
           } while (i <= 10);
         `,
-        options: ["2 5 8", "2 5 10", "5 10", "2"],
-        correctAnswer: 0,
+        options: ["2 5 10", "5 10", "2 5 8 11", "2"],
+        correctAnswer: 2,
       },
       // Question 37
       {
@@ -367,7 +338,19 @@ const jsQuestions = [
             n--;
           }
         `,
-        options: ["3 2 1", "1 2 3", "0", "3"],
+        options: ["3 2 1 1", "1 2 3", "0", "3"],
+        correctAnswer: 0,
+      },
+      {
+        question: "What will be the output?",
+        code: `
+          var n = 3;
+          while (n > 0) {
+            console.log(n);
+            --n;
+          }
+        `,
+        options: ["3 2 1 0", "1 2 3", "0", "3"],
         correctAnswer: 0,
       },
       // Question 39
@@ -410,8 +393,8 @@ const jsQuestions = [
               x -= 2;
             }
           `,
-          options: ["10 8 6", "9 7 5", "10 7 4", "5"],
-          correctAnswer: 0,
+          options: [ "9 7 5","10 8 6 4", "10 7 4", "5"],
+          correctAnswer: 1,
         },
         // Question 42
         {
@@ -477,7 +460,7 @@ const jsQuestions = [
               i -= 2;
             } while (i >= 0);
           `,
-          options: ["4 2 0", "2 0", "4", "Error"],
+          options: ["4 2 0 -2", "2 0", "4", "Error"],
           correctAnswer: 0,
         },
         // Question 47
@@ -503,10 +486,10 @@ const jsQuestions = [
               n -= 1.5;
             }
           `,
-          options: ["4 2.5 1", "4 2.5", "0", "4"],
+          options: ["4 2.5 1 -0.5", "4 2.5", "0", "4"],
           correctAnswer: 0,
         },
-        // Question 49
+        // Question 37 ===>
         {
           question: "What will be logged to the console?",
           code: `
@@ -518,7 +501,7 @@ const jsQuestions = [
               console.log(person[prop]);
             }
           `,
-          options: ["Charlie 22", "Charlie\n22", "22", "person[name] person[age]"],
+          options: ["Charlie 22", 'Charlie', "22", "person[name] person[age]"],
           correctAnswer: 0,
         },
         // Question 50
@@ -534,7 +517,6 @@ const jsQuestions = [
           options: ["1 2 3", "2 3", "1", "3"],
           correctAnswer: 0,
         },
-        // ... continue with more questions ...
 
           {
             question: "In JavaScript, what does the 'let' keyword primarily represent?",
@@ -621,14 +603,9 @@ const jsQuestions = [
             correctAnswer: 2,
           },
           {
-            question: "In CSS, which property is used to change the space between an element and its border?",
-            options: ["display", "margin", "padding", "border-box"],
-            correctAnswer: 2,
-          },
-          {
             question: "What does the 'a:hover' CSS rule indicate?",
             options: ["Change background-color on click", "Change font color on hover", "Change font size on click", "Change text-decoration on hover"],
-            correctAnswer: 1,
+            correctAnswer: 3,
           },
             {
               question: "What will the following code output?",
@@ -696,7 +673,7 @@ const jsQuestions = [
               code: `
                 5 + "5" - 2
               `,
-              options: ["8", "10", "55", "3"],
+              options: ["8", "10", "55", "53"],
               correctAnswer: 3,
             },
             // Add more questions here
@@ -777,13 +754,14 @@ const jsQuestions = [
                 options: ["534", "12", "8", "NaN"],
                 correctAnswer: 0,
               },
+              //74
               {
                 question: "What is the output of the following code snippet?",
                 code: `
                   console.log(typeof []);
                 `,
                 options: ["array", "object", "null", "undefined"],
-                correctAnswer: 3,
+                correctAnswer: 1,
               },
               // Add more questions here
             ];
