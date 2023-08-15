@@ -1,178 +1,187 @@
 const jsQuestions = [
-    {
-      question: "What will be the output of the following code?",
-      code: `
-        var x = 5;
-        console.log(x + "5");
-      `,
-      options: ["55", "10", "5", "undefined"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What will be the result?",
-      code: `
-        var age = 17;
-        if (age >= 18) {
-          console.log("You are an adult");
-        } else {
-          console.log("You are not an adult");
-        }
-      `,
-      options: ["You are an adult", "You are not an adult", "undefined", "Error"],
-      correctAnswer: 1,
-    },
-    {
-      question: "What will be logged to the console?",
-      code: `
-        var colors = ["red", "green", "blue"];
-        for (var color of colors) {
-          console.log(color);
-        }
-      `,
-      options: [
-        "red green blue",
-        "red\ngreen\nblue",
-        "'red', 'green', 'blue'",
-        "['red', 'green', 'blue']",
-      ],
-      correctAnswer: 0,
-    },
-    {
-      question: "What is the output of this function?",
-      code: `
-        function greet(name) {
-          console.log("Hello, " + name);
-        }
-        greet("Alice");
-      `,
-      options: ["Hello, Alice", "Hello, undefined", "Hello, null", "Error"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What will be the result of the expression?",
-      code: `
-        var a = 5;
-        var b = "10";
-        console.log(a + b);
-      `,
-      options: ["510", "15", "Error", "undefined"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What is the value of the variable?",
-      code: `
-        var x = 15;
-        var y = 7;
-        console.log(x % y);
-      `,
-      options: ["1", "2", "0.42857142857142855", "8"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What will be displayed in the console?",
-      code: `
-        var person = {
-          name: "John",
-          age: 30
-        };
-        console.log(person.name);
-      `,
-      options: ["John", "name", "30", "undefined"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What will be the output?",
-      code: `
-        var i = 0;
-        while (i < 5) {
-          console.log(i);
-          i++;
-        }
-      `,
-      options: ["0 1 2 3 4", "5", "1 2 3 4 5", "0 1 2 3"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What will be logged to the console?",
-      code: `
-        var fruits = ["apple", "banana", "orange"];
-        for (var fruit of fruits) {
-          if (fruit === "banana") {
-            continue;
+  {
+    question: "What will be logged to the console?",
+    code: `
+      var colors = ["red", "green", "blue"];
+      for (var color of colors) {
+        console.log(color);
+      }
+    `,
+    options: [
+      "red green blue",
+      "redgreenblue",
+      "'red', 'green', 'blue'",
+      "['red', 'green', 'blue']"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is the output of this function?",
+    code: `
+      function greet(name) {
+        console.log("Hello, " + name);
+      }
+      greet("Alice");
+    `,
+    options: [
+      "Hello, Alice",
+      "Hello, undefined",
+      "Hello, null",
+      "Error"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What will be displayed in the console?",
+    code: `
+      var person = {
+        name: "John",
+        age: 30
+      };
+      console.log(person.name);
+    `,
+    options: [
+      "John",
+      "name",
+      "30",
+      "undefined"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is the output of this expression?",
+    code: `
+      var a = 5;
+      var b = "10";
+      console.log(a + b);
+    `,
+    options: [
+      "510",
+      "15",
+      "Error",
+      
+      "undefined"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "What is the value of the variable?",
+    code: `
+      var x = 15;
+      var y = 7;
+      console.log(x % y);
+    `,
+    options: [
+      "1",
+      "2",
+      "0.42857142857142855",
+      "8"
+    ],
+    correctAnswer: 0
+  },
+    // ... continue with the remaining questions ...
+      {
+        question: "What will be displayed in the console?",
+        code: `
+          var person = {
+            name: "John",
+            age: 30
+          };
+          console.log(person.name);
+        `,
+        options: ["John", "name", "30", "undefined"],
+        correctAnswer: 0
+      },
+      {
+        question: "What will be the output?",
+        code: `
+          var i = 0;
+          while (i < 5) {
+            console.log(i);
+            i++;
           }
-          console.log(fruit);
-        }
-      `,
-      options: ["apple orange", "apple", "banana orange", "Error"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What is the output?",
-      code: `
-        var numbers = [2, 4, 6, 8];
-        for (var index in numbers) {
-          if (index == 2) {
-            break;
+        `,
+        options: ["0 1 2 3 4", "5", "1 2 3 4 5", "0 1 2 3"],
+        correctAnswer: 0
+      },
+      {
+        question: "What will be logged to the console?",
+        code: `
+          var fruits = ["apple", "banana", "orange"];
+          for (var fruit of fruits) {
+            if (fruit === "banana") {
+              continue;
+            }
+            console.log(fruit);
           }
-          console.log(numbers[index]);
-        }
-      `,
-      options: ["2 4", "2", "2 4 6", "Error"],
-      correctAnswer: 0,
-    },
-    {
-      question: "What will be the result of the expression?",
-      code: `
-        var a = 5;
-        var b = 2;
-        console.log(a - b);
-      `,
-      options: ["3", "2", "-3", "7"],
-      correctAnswer: 0,
-    },
-    // Question 22
-    {
-      question: "What will be the output?",
-      code: `
-        var person = {
-          name: "Alice",
-          age: 25
-        };
-        for (var key in person) {
-          console.log(key + ": " + person[key]);
-        }
-      `,
-      options: ["name: Alice age: 25", "name\nAlice age\n25", "Alice\n25", "person[name]\nperson[age]"],
-      correctAnswer: 0,
-    },
-    // Question 23
-    {
-      question: "What will be the output of this code?",
-      code: `
-        var x = 1;
-        while (x <= 10) {
-          console.log(x);
-          x += 2;
-        }
-      `,
-      options: ["1 3 5 7 9", "2 4 6 8 10", "1 2 3 4 5", "10 9 8 7 6"],
-      correctAnswer: 0,
-    },
-    // Question 24
-    {
-      question: "What is the value of z after this loop?",
-      code: `
-        var z = 4;
-        while (z < 10) {
-          z += 3;
-        }
-        console.log(z);
-      `,
-      options: ["4", "7", "10", "12"],
-      correctAnswer: 3,
-    },
-    // Question 25
-    {
+        `,
+        options: ["apple orange", "apple", "banana orange", "Error"],
+        correctAnswer: 0
+      },
+      {
+        question: "What is the output?",
+        code: `
+          var numbers = [2, 4, 6, 8];
+          for (var index in numbers) {
+            if (index == 2) {
+              break;
+            }
+            console.log(numbers[index]);
+          }
+        `,
+        options: ["2 4", "2", "2 4 6", "Error"],
+        correctAnswer: 0
+      },
+      {
+        question: "What will be the result of the expression?",
+        code: `
+          var a = 5;
+          var b = 2;
+          console.log(a - b);
+        `,
+        options: ["3", "2", "-3", "7"],
+        correctAnswer: 0
+      },
+      // ... continue with the remaining questions ...
+                {
+          question: "What will be the output?",
+          code: `
+            var person = {
+              name: "Alice",
+              age: 25
+            };
+            for (var key in person) {
+              console.log(key + ": " + person[key]);
+            }
+          `,
+          options: ["name: Alice age: 25", "name\nAlice age\n25", "Alice\n25", "person[name]\nperson[age]"],
+          correctAnswer: 0
+        },
+        {
+          question: "What will be the output of this code?",
+          code: `
+            var x = 1;
+            while (x <= 10) {
+              console.log(x);
+              x += 2;
+            }
+          `,
+          options: ["1 3 5 7 9", "2 4 6 8 10", "1 2 3 4 5", "10 9 8 7 6"],
+          correctAnswer: 0
+        },
+        {
+          question: "What is the value of z after this loop?",
+          code: `
+            var z = 4;
+            while (z < 10) {
+              z += 3;
+            }
+            console.log(z);
+          `,
+          options: ["4", "7", "10", "12"],
+          correctAnswer: 2
+        },
+                {
       question: "What will be displayed in the console?",
       code: `
         var fruits = ["apple", "banana", "orange"];
@@ -184,9 +193,8 @@ const jsQuestions = [
         }
       `,
       options: ["apple orange", "apple", "banana orange", "Error"],
-      correctAnswer: 0,
+      correctAnswer: 0
     },
-    // Question 26
     {
       question: "What will be logged to the console?",
       code: `
@@ -199,7 +207,7 @@ const jsQuestions = [
         }
       `,
       options: ["1 2 3 4 5", "1 3 4 5", "1 2 4 5", "1 3 5"],
-      correctAnswer: 1,
+      correctAnswer: 2
     },
     // Question 27
     {
@@ -212,7 +220,7 @@ const jsQuestions = [
         }
       `,
       options: ["0 1 2", "1 3 5", "0 2 4 6", "1 2 3"],
-      correctAnswer: 1,
+      correctAnswer: 2,
     },
     // Question 28
     {
@@ -258,29 +266,28 @@ const jsQuestions = [
       options: ["Bob", "30", "Bob 30", "Error"],
       correctAnswer: 0,
     },
-      {
-        question: "What will be the output?",
-        code: `
-          var x = 1;
-          while (x <= 5) {
-            console.log(x);
-            x += 2;
-          }
-        `,
-        options: ["1 3 5", "2 4 6", "1 2 3 4 5", "5"],
-        correctAnswer: 0,
-      },
-      // Question 32
-      {
-        question: "What will be the result of the expression?",
-        code: `
-          var a = 3;
-          var b = 2;
-          console.log(a * b);
-        `,
-        options: ["6", "5", "9", "1"],
-        correctAnswer: 0,
-      },
+    {
+      question: "What will be the output?",
+      code: `
+        var x = 1;
+        while (x <= 5) {
+          console.log(x);
+          x += 2;
+        }
+      `,
+      options: ["1 3 5", "2 4 6", "1 2 3 4 5", "5"],
+      correctAnswer: 0
+    },
+    {
+      question: "What will be the result of the expression?",
+      code: `
+        var a = 3;
+        var b = 2;
+        console.log(a * b);
+      `,
+      options: ["6", "5", "9", "1"],
+      correctAnswer: 0
+    },
       // Question 33
       {
         question: "What is the value of z after this loop?",
@@ -291,8 +298,8 @@ const jsQuestions = [
           }
           console.log(z);
         `,
-        options: ["8", "6", "5", "3"],
-        correctAnswer: 2,
+        options: ["8", "6", "5", "4"],
+        correctAnswer: 3,
       },
       // Question 34
       {
@@ -428,7 +435,7 @@ const jsQuestions = [
             console.log(z);
           `,
           options: ["7", "6", "5", "3"],
-          correctAnswer: 1,
+          correctAnswer: 3,
         },
         // Question 44
         {
@@ -484,7 +491,7 @@ const jsQuestions = [
             console.log(x);
           `,
           options: ["6", "4", "10", "Error"],
-          correctAnswer: 1,
+          correctAnswer: 2,
         },
         // Question 48
         {
@@ -549,8 +556,8 @@ const jsQuestions = [
               const result = sum(...numbers);
               console.log(result);
             `,
-            options: ["7", "9", "8", "None of the above"],
-            correctAnswer: 1,
+            options: ["6", "9", "8", "None of the above"],
+            correctAnswer: 0,
           },
           {
             question: "The 'document' object in JavaScript represents the HTML document that is displayed in the browser window.",
@@ -601,7 +608,7 @@ const jsQuestions = [
               console.log(sum(1, 2, 3));
             `,
             options: ["5", "7", "9", "6"],
-            correctAnswer: 1,
+            correctAnswer: 3,
           },
           {
             question: "In JavaScript, can a function be passed as a value of a variable?",
@@ -699,7 +706,7 @@ const jsQuestions = [
                   console.log([] == []);
                 `,
                 options: ["true", "false", "undefined", "TypeError"],
-                correctAnswer: 1,
+                correctAnswer: 1
               },
               {
                 question: "What does the 'NaN' stand for in JavaScript?",
@@ -776,15 +783,10 @@ const jsQuestions = [
                   console.log(typeof []);
                 `,
                 options: ["array", "object", "null", "undefined"],
-                correctAnswer: 1,
+                correctAnswer: 3,
               },
               // Add more questions here
             ];
-            
-          
-        
-      
-  
-  
 
-export default jsQuestions;
+            
+  export default jsQuestions;
