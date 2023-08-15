@@ -3,7 +3,6 @@ import jsQuestions from './qustions.js';
 window.onload=function(){
 
 
-console.log(jsQuestions.length)
 //number of qustions and counter for the current
 let selector=document.querySelector('#numberOfQustions')
 selector.value=localStorage.getItem('contentNumber')
@@ -184,6 +183,7 @@ const back=document.querySelector('.back')
 
 next.addEventListener('click', function() {
     answerButtons.forEach(button => {
+        //reset the button data click state
         button.setAttribute('data-clicked', 'false');
         button.removeAttribute('disabled');
         button.style.backgroundColor = 'var(--primary-color)';
@@ -217,11 +217,13 @@ back.addEventListener('click', function() {
     answerButtons.forEach((button, index) => {
         button.textContent = jsQuestions[qcount].options[index];
         button.style.backgroundColor= defaultColor
+        //reset the button data click state
+        button.setAttribute('data-clicked', 'false');
+        button.removeAttribute('disabled');
     });    
 })
 
 };
-
 
 
 
