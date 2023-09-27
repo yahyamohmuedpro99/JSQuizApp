@@ -2,7 +2,7 @@
 
 Welcome to the JavaScript Questions Quiz! This interactive quiz tests your JavaScript knowledge with a series of questions. Try your best to answer correctly and see how you score!
 
-![Quiz Screenshot](quizjs.png)
+![Quiz Screenshot](quizeapp.png)
 
 ## Features
 
